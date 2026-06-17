@@ -12,6 +12,7 @@ Use this skill when the user wants to create, summarize, expand, format, repair,
 ## Global Rules
 
 - Reply in Simplified Chinese unless the user explicitly requests another language.
+- At the beginning of each task run that depends on the Lark/Feishu CLI, perform a one-time version check using npm as the source of truth. Check the installed version with `npm list -g @larksuite/cli --depth=0` and the latest published version with `npm view @larksuite/cli version`; if the installed version is not the latest, upgrade with `npm install -g @larksuite/cli@latest` before continuing. Do not repeat this check within the same task run unless the CLI is reinstalled or the environment changes. Treat this as a hard prerequisite even if the user did not explicitly ask for an upgrade.
 - Keep commands, code identifiers, logs, API fields, and tokens in their original language.
 - Prefer Feishu native `sheet` for tables that need maintenance, comparison, checklists, field descriptions, or spreadsheet-like structure.
 - Before editing an existing Feishu doc, inspect whether it contains `<sheet>`, `<image>`, `<file>`, `<whiteboard>`, or other embedded blocks.
