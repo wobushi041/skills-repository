@@ -1,0 +1,28 @@
+# OS
+Thumbs.db
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Common dependency directories
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# Local archives
+*.zip
+*.7z
+*.rar
